@@ -27,7 +27,7 @@ class FasterWhisperTranscriber:
                 return False
             
     def record_audio(self):
-        recording = np.array([], dtype='float64').reshape(0,1)
+        recording = np.array([], dtype='float64').reshape(0,2)
         frames_per_buffer = int(self.sample_rate * 0.1)
         with keyboard.Listener(on_press=self.on_press_space, on_release=self.on_release_space) as listener:
             while True:
